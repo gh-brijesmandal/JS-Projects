@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body {
+    min-height: 100vh;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(145, 144, 143);
+    font-family: "DynaPuff", "Roboto Condensed", sans-serif;
+}
+
+.container {
+    display: inline-block;
+    height: 60%;
+    border-radius: 25px;
+    max-width: 700px;
+    box-shadow: 0px 4px 8px rgba(29, 77, 159, 0.3);
+    background-color: rgb(239, 223, 202);
+    border: 1px solid antiquewhite;
+    padding: 30px;
+}
+
+.container>h1 {
+    text-align: center;
+    margin: 30px auto;
+    color: rgba(1, 101, 68, 0.37);
+    transition: transform 0.4s ease-in-out;
+}
+
+.container>h1:hover {
+    transform: scale(1.02);
+}
+
+.form {
+    border: 1px solid red;
+    height: 70%;
+    border-radius: 15px;
+    font-family: "Roboto Condensed", "DynaPuff";
+}
+
+.form>input {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid pink;
+}
+
+.form>textarea {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid pink;
+    height: 30%;
+}
+
+button,
+#see-requests {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00b894;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+#see-requests:hover {
+    background-color: #019875;
+}
+
+#see-requests {
+    width: 50%;
+}
