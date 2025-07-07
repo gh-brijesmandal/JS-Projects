@@ -26,14 +26,16 @@ document.querySelector(".form").addEventListener("submit", (e) => {
 
 document.getElementById("see-requests").addEventListener("click", (e) => {
     e.preventDefault();
-    let container = document.querySelector(".requests-container");
-    container.innerHTML = "";
-
+    let container = document.querySelector(".container");
     if (requests.length === 0) {
         alert("No data to display!");
-        return;
     }
-
+    else {
+    container.innerHTML = "";
+    container.style.height = "80%";
+    container.innerHTML = `
+    <h1>All Requests Displayed.</h1>
+    `;
     requests.forEach(req => {
         const div = document.createElement("div");
         div.className = "request-card";
@@ -43,5 +45,14 @@ document.getElementById("see-requests").addEventListener("click", (e) => {
         `;
         container.appendChild(div);
     });
+
+    const backBtn = document.createElement("button");
+    backBtn.textContent = "← Back to Form";
+    backBtn.style.marginTop = "20px";
+    backBtn.addEventListener("click", () => {
+    window.location.reload(); 
+    });
+    container.appendChild(backBtn);
+    }
 });
 
